@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.uic.cs478.Shanmathi.Service"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="13"
+        android:targetSdkVersion="19" />
+
+    <permission android:name="edu.uic.cs478.Shanmathi.Service.GEN_ID" >
+    </permission>
+	
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher" >
+ 
+        <service
+            android:label="@string/app_name"
+            android:name="edu.uic.cs478.Shanmathi.Service.PlayerService"
+            android:exported="true"
+            android:permission="edu.uic.cs478.Shanmathi.Service.GEN_ID" >
+            <intent-filter>
+                <action android:name="edu.uic.cs478.Shanmathi.Common.MusicPlayer" />
+            </intent-filter>
+        </service>
+        
+    </application>
+
+</manifest>
